@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="dbup" Version="5.0.40" />
+      <PackageReference Include="dbup-postgresql" Version="5.0.40" />
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Migrations\Script0001_CreateTables.sql">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Scripts\Script0001_CreateTables.sql" />
+      <EmbeddedResource Include="Scripts\Script0001_CreateTables.sql" />
+    </ItemGroup>
+
+</Project>
