@@ -8,15 +8,8 @@ using ThreadBasket.Domain.Contracts;
 
 namespace ThreadBasket.WebApi.Tests.DmcThread;
 
-public class CreateHandlerTests
+public class CreateHandlerTests : TestFixture
 {
-    private readonly IDmcThreadRepository _repository;
-
-    public CreateHandlerTests()
-    {
-        _repository = A.Fake<IDmcThreadRepository>();
-    }
-
     [Fact]
     public async Task Handler_HasValidRequest_WillProduceNoErrors()
     {

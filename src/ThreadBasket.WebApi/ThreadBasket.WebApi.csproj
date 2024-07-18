@@ -20,4 +20,11 @@
       <ProjectReference Include="..\ThreadBasket.Data\ThreadBasket.Data.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Remove=".appsettings.Development.json" />
+      <None Include="appsettings.Development.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>

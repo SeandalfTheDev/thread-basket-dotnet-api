@@ -3,7 +3,7 @@ using Mediator;
 
 namespace ThreadBasket.Application.Features.DmcThread.Models;
 
-public record GetDmcThreadRequest(int Id) : IRequest<ErrorOr<Domain.Entities.DmcThread>>;
+public record GetDmcThreadRequest(int Id) : IRequest<ErrorOr<Domain.Entities.DmcThread?>>;
 
 public record GetDmcThreadListRequest(int Page = 1, int Size = 20) : IRequest<ErrorOr<PagedList<Domain.Entities.DmcThread>>>;
 

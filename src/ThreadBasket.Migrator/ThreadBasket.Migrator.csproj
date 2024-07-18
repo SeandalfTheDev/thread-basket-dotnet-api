@@ -29,4 +29,11 @@
       <EmbeddedResource Include="Scripts\Script0001_CreateTables.sql" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove=".appsettings.Development.json" />
+      <Resource Include="appsettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+    </ItemGroup>
+
 </Project>
