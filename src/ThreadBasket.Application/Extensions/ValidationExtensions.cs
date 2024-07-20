@@ -12,7 +12,7 @@ public static class ValidationExtensions
         foreach (var failure in result.Errors)
         {
             errors.Add(Error.Validation(
-                failure.ErrorCode,
+                failure.PropertyName,
                 failure.ErrorMessage));
         }
 

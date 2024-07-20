@@ -4,7 +4,6 @@ using FluentAssertions;
 using FluentAssertions.Execution;
 using ThreadBasket.Application.Features.DmcThread.Handlers;
 using ThreadBasket.Application.Features.DmcThread.Models;
-using ThreadBasket.Domain.Contracts;
 
 namespace ThreadBasket.WebApi.Tests.DmcThread;
 
